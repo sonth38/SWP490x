@@ -1,0 +1,40 @@
+<%- include('./includes/head.ejs') %>
+<link rel="stylesheet" href="/css/form.css">
+<link rel="stylesheet" href="/css/charity.css">
+
+</head>
+<body>
+    <%- include('./includes/navigation.ejs') %>
+    
+    <main>
+        <div class="container-fluid form-controller centered">
+            <form action="/admin/add-charity" method="POST">
+                <div class="form-input-controller">
+                    <label class="form-label" for="title">Tên chương trình</label>
+                    <input class="form-input form-control" type="text" name="title" id="title">
+                </div>
+                <div class="form-input-controller">
+                    <label class="form-label" for="organization">Tên tổ chức</label>
+                    <input class="form-input form-control" type="text" name="organization" id="organization">
+                </div>
+                <div class="form-input-controller">
+                    <label class="form-label" for="objectives">Mục tiêu</label>
+                    <input class="form-input form-control" type="number" name="objectives" id="objectives">
+                </div>
+                <div class="form-input-controller">
+                    <label class="form-label" for="date">Ngày kết thúc</label>
+                    <input class="form-input form-control" type="date" name="date" id="date">
+                </div>
+                <div class="form-input-controller">
+                    <label class="form-label" for="imageUrl">Hình ảnh</label>
+                    <input class="form-input form-control" type="text" name="imageUrl" id="imageUrl">
+                </div>
+                <div class="form-input-controller">
+                    <label class="form-label" for="description">Nội dung</label>
+                    <input class="form-input form-control" type="text" name="description" id="description">
+                </div>
+                <button class="btn btn-primary" type="submit">ADD CHARITY</button>
+            </form>
+        </div>
+        
+<%- include('./includes/end.ejs') %>
