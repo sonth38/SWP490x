@@ -1,0 +1,23 @@
+.form-controller {
+    width: 600px;
+    max-width: 90%;
+    margin-top: 20px;
+}
+  
+  .form-input-controller {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+  
+  label.form-label {
+    width: 25%;
+}
+  
+  .form-input {
+    width: 74%;
+    height: inherit;
+    display: inline-block;
+}

@@ -12,18 +12,22 @@
                 <div class="card-body">
                     <h3>Các hoàn cảnh Quyên góp</h3>
                 </div>
-                <div class="card-group">
+                <div class="card-deck">
                     <% for (let item of charity) { %>
                     <div class="card" style="width: 18rem;">
-                        <img 
-                            src="https://static.mservice.io/blogscontents/momo-upload-api-220804120412-637952114524645368.jpg" 
+                        <a href="#">
+                            <img 
+                            src="<%= item.imageUrl %>" 
                             class="card-img-top" 
                             alt="..."
                         >
+                        </a>
                         <div class="card-body">
-                            <h5 class="card-title"> 
-                                <%= item.title %>
-                            </h5>
+                            <a href="#">
+                                <h5 class="card-title"> 
+                                    <%= item.title %>
+                                </h5>
+                            </a>
                             <p class="card-text">
                                 <%= item.organization %>
                             </p>
@@ -31,6 +35,10 @@
                         <div class="card-footer">
                             <a href="#" class="btn btn-primary">Quyên góp</a>
                         </div>
+                        <form action="/admin/delete-charity" method="POST">
+                            <input type="hidden" name="charityId" value="<%= item._id %>">
+                            <button class="btn" type="submit">Delete</button>
+                        </form>
                     </div>
                     <% } %>
                 </div>
